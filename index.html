@@ -55,36 +55,7 @@
         }
 
 
-        @media (max-width: 768px) {
-            h2{
-                font-size: 16px;
-            }
-
-            .nav-links {
-                display: none;
-                flex-direction: column;
-
-                position: absolute;
-                top: 50px;
-                right: 0;
-
-                width: 50vw;
-                height: 100vh;
-                padding: 15px;
-
-                background-color: #333;
-                gap: 20px;
-            }
-
-            
-
-            #menu-btn {
-                display: block;
-            }
-
-
-        }
-
+        
         .inputExpense, .ExpenseCategory{
             background-color: #1c2029;
             border: none;
@@ -140,13 +111,62 @@
             /* background-color: #fff; */
         }
 
-        
-        
 
-        
+        @media (max-width: 768px) {
+            h2{
+                font-size: 16px;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+
+                position: absolute;
+                top: 50px;
+                right: 0;
+
+                width: 50vw;
+                height: 100vh;
+                padding: 15px;
+
+                background-color: #333;
+                gap: 20px;
+            }
+
+            
+
+            #menu-btn {
+                display: block;
+            }
+
+            .total{
+                font-size: 14px;
+            }
+            .total-expenses{
+                font-size: 18px;
+            }
+
+            .container{
+                
+                width: 94vw;
+                flex-direction: column;
+            }
+
+            .inputs{
+                flex-direction: column;
+            }
+
+            .AddExpenseBtn{
+                width: 100%;
+                border-radius: 8px;
+            }
 
 
 
+        }
+
+
+  
     </style>
 </head>
 <body>
