@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #212121;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        nav{
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(255,255,255,0.1);
+            height: 50px;
+            align-items: center;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .nav-links a{
+            text-decoration: none;
+            color: #fff;
+            
+        }
+
+        .nav-links{
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        #menu-btn{
+            width: 25px;
+            display: none;
+        }
+
+        .link-button{
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        h2{
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+
+        @media (max-width: 768px) {
+            h2{
+                font-size: 16px;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+
+                position: absolute;
+                top: 50px;
+                right: 0;
+
+                width: 50vw;
+                height: 100vh;
+                padding: 15px;
+
+                background-color: #333;
+                gap: 20px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            #menu-btn {
+                display: block;
+            }
+
+
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <h2>Expense Tracker</h2>
+
+        <div class="link-button">
+
+        <div class="nav-links">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Blogs</a>
+            <a href="https://www.linkedin.com/in/abhijeet-singh79/" target="_blank">Follow Us</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <button id="menu-btn">☰</button>
+
+        </div>
+    </nav>
+
+    
+</body>
+<script>
+    const menuBtn = document.querySelector('#menu-btn')
+    const navLink = document.querySelector('.nav-links')
+    menuBtn.addEventListener('click', (e)=>{
+        navLink.classList.toggle('active')
+    })
+</script>
+
+
+</html>
